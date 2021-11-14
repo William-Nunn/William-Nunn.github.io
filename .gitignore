@@ -1,15 +1,20 @@
+### NOTE: This file determines what files cannot be committed to Git repositories, it is not relevant to the deployed website.
+
 # Jekyll stuff
 /_site
 .jekyll-metadata
 .jekyll-cache
-Gemfile.lock
 /gemfiles/
 /vendor/
+
+# Ruby
+Gemfile.lock
+.ruby-version
 
 # npm
 node_modules
 
-# IDE
+# text editors / IDE
 .vscode/
 
 # OS

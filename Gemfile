@@ -1,16 +1,19 @@
+### NOTE: This file is ONLY relevant for developing locally. It is completely ignored when the website is deployed.
+
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.2.1"
-gem 'webrick'
+# For Github Pages, valid plugins must appear on the list at https://pages.github.com/versions/ ; additional plugins are ignored
+# default plugins are included here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins
+# second argument of next line is the version of the github-pages dependency
+gem "github-pages", "~> 219", group: :jekyll_plugins
 
-group :jekyll_plugins do
-  gem 'jekyll-sitemap'
-  gem 'jekyll-feed'
-  gem 'jekyll-seo-tag'
-  gem 'jekyll-email-protect'
-  gem 'jekyll-titles-from-headings'
-  gem 'minima'
-end
+### The next block of code can be ignored unless not using Github Pages
+#gem "jekyll", "~> 4.2.1"
+#group :jekyll_plugins do
+  #gem 'jekyll-email-protect' # this could be a useful plugin, but Github Pages doesn't allow it
+#end
+
+gem 'webrick' # web server for local development
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.

@@ -3,7 +3,8 @@
 # title that is included in every browser tab. You can include an additonal title on each content page, which will make the title look like "{{CONTENT_TITLE}} | {{WEBSITE_TITLE}}"
 title: William Nunn
 name: William Nunn
-description: "Voice Actor, Writer, & Creator of Audio Dramas/One Shots: D&D Character Podcast!"
+description: >-
+  Voice Actor, Writer, & Creator of Audio Dramas/One Shots: D&D Character Podcast!
 email: wnunnVO2814@gmail.com
 twitter:
   username: VoiceThatCooks
@@ -17,11 +18,15 @@ defaults:
   values:
     image: "/content/images/headshot.jpeg" # embed image on social media cards
 
+# this is only for phone header colors, the actual website colors will be configured in a .scss file
+theme-color: #aa3d01
+
 ### !!! Nothing below this line should ever need to be edited !!! ###
 
 theme: minima
 
 exclude:
+  - CNAME
   - Gemfile
   - Gemfile.lock
   - node_modules
@@ -31,12 +36,12 @@ exclude:
   - vendor/ruby/
   - README.md
 
+# For Github Pages, valid plugins must appear on the list at https://pages.github.com/versions/ ; additional plugins are ignored
+# default plugins are included here: https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll#plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-email-protect
-  - jekyll-titles-from-headings
 
 sass:
   style: compressed
