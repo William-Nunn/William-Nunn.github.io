@@ -19,5 +19,3 @@ plugins:
   - jekyll-seo-tag
 
 incremental: true
-
-theme: jekyll-theme-cayman
