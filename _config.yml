@@ -1,21 +1,45 @@
 ### Website properties ###
 
 # title that is included in every browser tab. You can include an additonal title on each content page, which will make the title look like "{{CONTENT_TITLE}} | {{WEBSITE_TITLE}}"
-title: William Nunn - Voice Actor
+title: William Nunn
+name: William Nunn
+description: "Voice Actor, Writer, & Creator of Audio Dramas/One Shots: D&D Character Podcast!"
 email: wnunnVO2814@gmail.com
-twitter_username: VoiceThatCooks
-instagram_username: thevoicethatcooks
+twitter:
+  username: VoiceThatCooks
+instagram:
+  username: thevoicethatcooks
 
-### !!! Everything below this line shouldn't ever need to be edited !!! ###
+logo: "/content/images/headshot.jpeg"
+defaults:
+- scope:
+    path: ''
+  values:
+    image: "/content/images/headshot.jpeg" # embed image on social media cards
+
+### !!! Nothing below this line should ever need to be edited !!! ###
 
 theme: minima
 
 exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
   - README.md
 
 plugins:
   - jekyll-feed
-  - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-email-protect
+  - jekyll-titles-from-headings
 
-incremental: true
+sass:
+  style: compressed
+
+livereload: true
+incremental: true # note: GH-Pages will always have this set to "false", but still helpful for local development
