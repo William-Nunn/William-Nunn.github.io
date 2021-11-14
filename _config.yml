@@ -8,7 +8,7 @@ instagram_username: thevoicethatcooks
 
 ### !!! Everything below this line shouldn't ever need to be edited !!! ###
 
-#theme: minima
+theme: minima
 
 exclude:
   - README.md

@@ -6,8 +6,7 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap'
   gem 'jekyll-feed'
   gem 'jekyll-seo-tag'
-  # default theme
-  #gem 'minima'
+  gem 'minima'
   gem 'webrick'
 end
 
