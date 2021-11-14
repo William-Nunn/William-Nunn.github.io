@@ -1,0 +1,16 @@
+# Jekyll stuff
+/_site
+.jekyll-metadata
+.jekyll-cache
+Gemfile.lock
+/gemfiles/
+/vendor/
+
+# npm
+node_modules
+
+# IDE
+.vscode/
+
+# OS
+.DS_Store

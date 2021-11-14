@@ -1,0 +1,21 @@
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+{% feed_meta %}
+<link
+  rel="preload"
+  href="{{ 'fonts/lato-v14-latin-300.woff2' | relative_url }}"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link
+  rel="preload"
+  href="{{ 'fonts/lato-v14-latin-700.woff2' | relative_url }}"
+  as="font"
+  type="font/woff2"
+  crossorigin
+/>
+<link rel="preload" href="{{ 'css/style.css' | relative_url }}" as="style" />
+<link rel="stylesheet" href="{{ 'css/style.css' | relative_url }}" />
+<link rel="icon" type="image/x-icon" href="{{ 'content/icons/favicon.png' | relative_url }}">
+{% seo %}

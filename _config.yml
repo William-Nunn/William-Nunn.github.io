@@ -1,0 +1,21 @@
+### Website properties ###
+
+# title that is included in every browser tab. You can include an additonal title on each content page, which will make the title look like "{{CONTENT_TITLE}} | {{WEBSITE_TITLE}}"
+title: William Nunn - Voice Actor
+email: wnunnVO2814@gmail.com
+twitter_username: VoiceThatCooks
+instagram_username: thevoicethatcooks
+
+### !!! Everything below this line shouldn't ever need to be edited !!! ###
+
+#theme: minima
+
+exclude:
+  - README.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+incremental: true

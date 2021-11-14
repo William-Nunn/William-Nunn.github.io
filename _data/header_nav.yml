@@ -1,0 +1,9 @@
+- title: Home
+  link: /
+  openNewTab: false
+- title: About
+  link: /about
+  openNewTab: false
+- title: Resume
+  link: /content/documents/William-Nunn-VO-Resume.pdf
+  openNewTab: true

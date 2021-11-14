@@ -1,0 +1,26 @@
+<footer id="site-footer">
+  <div id="site-footer-content" class="center">
+    <h3>Contact</h3>
+    <div>
+      <p>Email me: <a href="mailto:{{site.email}}">{{site.email}}</a></p>
+    </div>
+    <div>
+      <span>
+        <a
+          href="https://twitter.com/{{site.twitter_username}}"
+          title="@{{site.twitter_username}}"
+        >
+          <img src="{{ 'content/icons/twitter.png' | relative_url }}" alt="Twitter - @{{site.twitter_username}}" />
+        </a>
+      </span>
+      <span>
+        <a
+          href="https://instagram.com/{{site.instagram_username}}"
+          title="@{{site.instagram_username}}"
+        >
+          <img src="{{ 'content/icons/instagram.png' | relative_url }}" alt="Instagram - @{{site.instagram_username}}" />
+        </a>
+      </span>
+    </div>
+  </div>
+</footer>

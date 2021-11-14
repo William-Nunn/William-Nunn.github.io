@@ -1,0 +1,118 @@
+/* Generic */
+
+$background-color: #171820;
+$text-color: #dcd6de;
+$primary-color: #aa3d01;
+$secondary-color: #df861d;
+$tertiary-color: #fdc029;
+
+$max-content-width: 1280px;
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  line-height: 1.15em;
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color;
+  color: $text-color;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 300;
+  -webkit-font-feature-settings: "kern" on, "liga" on, "calt" on, "onum", "pnum";
+  -moz-font-feature-settings: "kern" on, "liga" on, "calt" on, "onum", "pnum";
+  -ms-font-feature-settings: "kern" on, "liga" on, "calt" on, "onum", "pnum";
+  -o-font-feature-settings: "kern" on, "liga" on, "calt" on, "onum", "pnum";
+  font-feature-settings: "kern" on, "liga" on, "calt" on, "onum", "pnum";
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+iframe {
+  border: none;
+  min-width: 50vw;
+  margin: 36px 0;
+  align-self: center;
+}
+
+#content {
+  flex: 1 0 auto;
+  img {
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+/* HEADER */
+
+#site-header {
+  background-color: $primary-color;
+  color: $background-color;
+  padding: 16px 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+#header-real-name {
+  font-size: 36px;
+}
+
+#header-pseudonym {
+  font-style: oblique;
+}
+
+#site-nav {
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  a {
+    color: $background-color;
+    padding: 0.5em 1em;
+  }
+  .current-nav-link {
+    a {
+      background-color: $background-color;
+      color: $primary-color;
+    }
+  }
+}
+
+/* FOOTER */
+
+#site-footer {
+  background-color: $primary-color;
+  padding-bottom: 24px;
+  a {
+    color: $background-color;
+  }
+}
+
+@media screen and (max-width: $max-content-width) {
+  #site-footer-content {
+    margin: 0 10%;
+  }
+}
+
+/* classes */
+.center {
+  max-width: $max-content-width;
+  margin: 0 auto;
+}
