@@ -1,8 +1,8 @@
 <header id="site-header">
-  <div id="header-left">
+  <section id="header-left">
     <span id="header-real-name">William Nunn</span>
     <span id="header-pseudonym">The Voice That Cooks</span>
-  </div>
+  </section>
   <nav id="site-nav">
     <ul>
       {% for p in site.data.header_nav -%}
@@ -24,4 +24,27 @@
       {% endfor -%}
     </ul>
   </nav>
+  <section id="social-links">
+    <span>
+      <a
+        href="https://twitter.com/{{site.twitter.username}}"
+        title="@{{site.twitter.username}}"
+      >
+        <img src="{{ 'content/icons/twitter.svg' | relative_url }}" alt="Twitter - @{{site.twitter.username}}" height="64" width="64" />
+      </a>
+    </span>
+    <span>
+      <a
+        href="https://instagram.com/{{site.instagram.username}}"
+        title="@{{site.instagram.username}}"
+      >
+        <img src="{{ 'content/icons/instagram.svg' | relative_url }}" alt="Instagram - @{{site.instagram.username}}" height="64" width="64" />
+      </a>
+    </span>
+    <span>
+      <a href="mailto:{{site.email}}" title="{{site.email}}">
+        <img src="{{ 'content/icons/envelope.svg' | relative_url }}" alt="Email - {{site.email}}" height="64" width="64" />
+      </a>
+    </span>
+  </section>
 </header>

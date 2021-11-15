@@ -1,15 +1,17 @@
-/* Generic */
+/******* Variables ********/
 
 $background-color: #171820;
 $text-color: #dcd6de;
 $primary-color: #aa3d01;
-$secondary-color: #df861d;
-$tertiary-color: #fdc029;
+$link-color: #b5e853;
 
-$breakpoints-small: 600px;
-$breakpoints-medium: 900px;
-$breakpoints-large: 1200px;
-$breakpoints-xl: 1536px;
+// breakpoints assume 'max-width' - i.e. a "medium" device will be from 900 to 1200 px
+$breakpoints-xs: 600px;
+$breakpoints-small: 900px;
+$breakpoints-medium: 1200px;
+$breakpoints-large: 1536px;
+
+/******* Generic *******/
 
 body {
   margin: 0;
@@ -17,7 +19,6 @@ body {
   line-height: 1.15em;
   display: flex;
   flex-direction: column;
-  background-color: $background-color;
   color: $text-color;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 24px;
@@ -27,6 +28,11 @@ body {
   -ms-font-feature-settings: "kern" on, "liga" on, "calt" on, "onum", "pnum";
   -o-font-feature-settings: "kern" on, "liga" on, "calt" on, "onum", "pnum";
   font-feature-settings: "kern" on, "liga" on, "calt" on, "onum", "pnum";
+  background-image: url("/content/images/headshot.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 img {
@@ -38,23 +44,41 @@ a {
   text-decoration: none;
 }
 
+// Any changes here have to be able to work with iframe code c&p'd from various websites. Some have sane default width/height settings, some don't.
+// We can reasonably make the width/horizontal positioning of all iframes good from here, but height will usually have to be modified from content pages.
 iframe {
   border: none;
   min-width: 50vw;
   margin: 36px 0;
   align-self: center;
-}
-
-#content {
-  flex: 1 0 auto;
-  img {
-    text-align: center;
-    margin: 0 auto;
-    display: block;
+  @media screen and (min-width: $breakpoints-medium) {
+    min-width: unset;
+    max-width: $breakpoints-medium;
   }
 }
 
-/* HEADER */
+// The most important block; everything here should allow for easy editing of content markdown files, without being concerned with HTML-specific markup.
+#content {
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+  a {
+    color: $link-color;
+  }
+  opacity: 0.9;
+  min-height: 100%;
+  padding: 18px;
+  width: calc(100% - 36px); // 100% - padding * 2
+  max-width: $breakpoints-medium;
+  background-color: $background-color;
+  flex: 1 0 auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/******* HEADER *******/
 
 #site-header {
   background-color: $primary-color;
@@ -64,21 +88,26 @@ iframe {
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-}
-
-@media screen and (max-width: $breakpoints-medium) {
-  #site-header {
+  border-radius: 0 0 24px 24px;
+  @media screen and (max-width: $breakpoints-small) {
     flex-direction: column;
+  }
+  @media screen and (max-width: ($breakpoints-medium + 84px)) {
+    border-radius: 0;
   }
 }
 
 #header-left {
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: $breakpoints-small) {
+    margin: 1em 0;
+  }
 }
 
 #header-real-name {
   font-size: 36px;
+  font-weight: 400;
 }
 
 #header-pseudonym {
@@ -86,23 +115,30 @@ iframe {
 }
 
 #site-nav {
+  @media screen and (max-width: $breakpoints-small) {
+    // site nav should be in the center if header is horizontal, and at the bottom if header is vertical
+    order: 9001; // WHAT?! 9000?
+  }
   ul {
     list-style-type: none;
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-left: 0;
   }
-  @media screen and (max-width: 360px) {
+  @media screen and (max-width: $breakpoints-xs) {
     ul {
       flex-direction: column;
+      margin: 0 0 12px 0;
       li {
-        margin: 12px 0;
+        margin-top: 24px;
       }
     }
   }
   a {
     color: $background-color;
     padding: 0.5em 1em;
+    border-radius: 12px;
   }
   .current-nav-link {
     a {
@@ -112,24 +148,15 @@ iframe {
   }
 }
 
-/* FOOTER */
-
-#site-footer {
-  background-color: $primary-color;
-  padding-bottom: 24px;
-  a {
-    color: $background-color;
+#social-links {
+  span {
+    margin: 0 6px;
   }
 }
 
-@media screen and (max-width: $breakpoints-large) {
-  #site-footer-content {
-    margin: 0 10%;
-  }
-}
+/******* classes *******/
 
-/* classes */
 .center {
-  max-width: $breakpoints-large;
+  max-width: $breakpoints-medium;
   margin: 0 auto;
 }

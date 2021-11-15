@@ -2,8 +2,6 @@
 layout: default
 ---
 
-![William Nunn](/content/images/headshot.jpeg)
-
 <iframe 
   src="https://open.spotify.com/embed/show/7Ewd7bSxDH4dbvkfT6YCt2?utm_source=generator" 
   width="100%" 
@@ -14,11 +12,11 @@ layout: default
 ></iframe>
 
 <iframe 
-        src="https://open.spotify.com/embed/show/1dX36qipnRNBGu1MYpvHcA?utm_source=generator" 
-        width="100%" 
-        height="232" 
-        frameBorder="0" 
-        allowfullscreen="" 
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        ></iframe>
+  src="https://open.spotify.com/embed/show/1dX36qipnRNBGu1MYpvHcA?utm_source=generator" 
+  width="100%" 
+  height="232" 
+  frameBorder="0" 
+  allowfullscreen="" 
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+></iframe>
         

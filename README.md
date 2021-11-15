@@ -1,5 +1,7 @@
 Personal website of William Nunn / VoiceThatCooks
 
+Hosted at https://william-nunn.github.io/
+
 Built by [Lance Drane](https://github.com/Lance-Drane)
 
 ## Running locally
