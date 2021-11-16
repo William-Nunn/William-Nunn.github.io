@@ -4,13 +4,13 @@ $background-color: #151515; // also used as the stroke or fill property for SVGs
 $text-color: #dcd6de;
 $primary-color: #aa3d01; // also used in _config.yml
 $link-color: #b5e853;
+$background-color-formatting: #000000;
 
 // breakpoints assume 'max-width' - i.e. a "medium" device will be from 900 to 1200 px
 $breakpoints-xs: 600px;
 $breakpoints-small: 900px;
 $breakpoints-medium: 1200px;
 $breakpoints-large: 1536px;
-$breakpoints-xl: 2400px;
 
 /******* Generic *******/
 
@@ -41,7 +41,8 @@ a {
 }
 
 pre {
-  background: #000;
+  background: $background-color-formatting;
+  padding: 5px;
   overflow: auto;
   overflow-y: hidden;
 }
@@ -100,8 +101,7 @@ iframe {
   width: 100%;
   position: fixed;
   z-index: -9001; // WHAT?! -9000?
-  @media screen and (min-width: $breakpoints-xl) {
-    // once we can't see the full face, fall back to a slightly flattened version
+  @media screen and (orientation: landscape) {
     background-size: 100vw 100vh;
   }
 }
