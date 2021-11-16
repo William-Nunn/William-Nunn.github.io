@@ -18,9 +18,7 @@ _"William's food makes me feel like I ate at a five-star gourmet, except I get t
 
 _"He uses n00b tubes in every match we play, and cackles like a maniac every time he gets a kill."_ - **Rudyard Kepler**
 
-## Scrolling Down
-
-The background image may look a little different based on whether or not you can scroll down.
+## Etc.
 
 [Here's a link to the source code. This is how link colors should look.](https://github.com/William-Nunn/William-Nunn.github.io)
 
