@@ -57,8 +57,8 @@ iframe {
   background-image: url("/content/images/headshot.jpeg");
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
-  background-position: top center;
   background-attachment: fixed;
+  display: flex;
 }
 
 // The most important block; everything here should allow for easy editing of content markdown files, without being concerned with HTML-specific markup.
