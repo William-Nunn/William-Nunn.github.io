@@ -61,8 +61,8 @@ iframe {
   background-size: cover;
   display: flex;
   @media screen and (max-width: $breakpoints-medium) {
-    background-position: top center;
-    background-size: 100vw auto;
+    background-position: bottom center;
+    background-size: 100vw 100vh;
   }
 }
 
