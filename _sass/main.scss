@@ -58,24 +58,10 @@ iframe {
   }
 }
 
-#look-at-this-guy-wrapper {
-  flex: 1 0 auto;
-  background-image: url("/content/images/headshot.jpeg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  display: flex;
-  @media screen and (hover: none) {
-    background-attachment: initial;
-  }
-}
-
+/******* MARKDOWN CONTENT *******/
 // The most important block; everything here should allow for easy editing of content markdown files, without being concerned with HTML-specific markup.
 #content {
+  box-sizing: border-box;
   img {
     margin: 0 auto;
     display: block;
@@ -96,10 +82,23 @@ iframe {
   max-width: $breakpoints-medium;
   background-color: $background-color;
   border-radius: 24px;
-  margin: 24px auto;
+  margin: 10vh auto 5vh;
   @supports (margin-bottom: env(safe-area-inset-bottom)) {
-    margin-bottom: calc(env(safe-area-inset-bottom, 0) + 24px);
+    margin-bottom: calc(env(safe-area-inset-bottom, 0) + 5vh);
   }
+}
+
+/******* HERO IMAGE - even works on IOS! *******/
+
+#site-look-at-this-guy {
+  background-image: url("/content/images/headshot.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: -9001; // WHAT?! -9000?
 }
 
 /******* HEADER *******/
@@ -107,7 +106,9 @@ iframe {
 #site-header {
   background-color: $primary-color;
   color: $background-color;
+  opacity: .9;
   padding: 16px 8px 16px 8px;
+  border-radius: 0 0 24px 24px;
   display: flex;
   flex-direction: row;
   align-items: center;
