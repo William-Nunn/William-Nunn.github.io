@@ -39,6 +39,12 @@ a {
   text-decoration: none;
 }
 
+pre {
+  background: #000;
+  overflow: auto;
+  overflow-y: hidden;
+}
+
 // Any changes here have to be able to work with iframe code c&p'd from various websites. Some have sane default width/height settings, some don't.
 // We can reasonably make the width/horizontal positioning of all iframes good from here, but height will usually have to be modified from content pages.
 iframe {
@@ -63,11 +69,8 @@ iframe {
   -moz-background-size: cover;
   -o-background-size: cover;
   display: flex;
-  @media screen and (min-width: $breakpoints-medium) {
-    background-size: 100vw 100vh;
-    -webkit-background-size: 100vw 100vh;
-    -moz-background-size: 100vw 100vh;
-    -o-background-size: 100vw 100vh;
+  @media screen and (hover: none) {
+    background-attachment: initial;
   }
 }
 
