@@ -10,6 +10,7 @@ $breakpoints-xs: 600px;
 $breakpoints-small: 900px;
 $breakpoints-medium: 1200px;
 $breakpoints-large: 1536px;
+$breakpoints-xl: 2400px;
 
 /******* Generic *******/
 
@@ -93,12 +94,16 @@ iframe {
 #site-look-at-this-guy {
   background-image: url("/content/images/headshot.jpeg");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center 12.5%;
   background-size: cover;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: -9001; // WHAT?! -9000?
+  @media screen and (min-width: $breakpoints-xl) {
+    // once we can't see the full face, fall back to a slightly flattened version
+    background-size: 100vw 100vh;
+  }
 }
 
 /******* HEADER *******/
