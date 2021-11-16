@@ -11,6 +11,9 @@
 Gemfile.lock
 .ruby-version
 
+# Sass
+.sass-cache
+
 # npm
 node_modules
 
