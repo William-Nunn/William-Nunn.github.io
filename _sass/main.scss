@@ -40,6 +40,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 pre {
   background: $background-color-formatting;
   padding: 5px;
