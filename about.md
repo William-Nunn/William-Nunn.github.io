@@ -8,7 +8,7 @@ permalink: /about/
 
 > _"The mystery of life isn't a problem to solve, but a reality to experience."_
 >
-> Frank Herbert. 
+> Frank Herbert
 
 Where to start. First of all, hello there. Second, I'm a nerd. Probably should be aware of that right away. Third, I also love is voice acting! I love getting behind a microphone and play all sorts of characters. Whether they be caclking crazies, dragonborn bards, supervillains, gruff soldiers, nervous nerds, or just the guy next door, I'm more than happy to give your character the passion and attention it deserves in the epic story you want to bring to life! 
 
@@ -21,6 +21,3 @@ And while you're here, feel free to listen to my podcasts that are available on 
 ## Testimonials
 
 _"William has a great affinity for storytelling and character creation. He is thoughtful in his work and brings a great energy to everything he does. Absolute pleasure to work with."_- **[Carlyle DePriest](https://www.carlyledepriest.com/)**
-
-
-```
