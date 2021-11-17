@@ -8,7 +8,7 @@ permalink: /about/
 
 _"The mystery of life isn't a problem to solve, but a reality to experience."_- Frank Herbert. 
 
-I'm a storyteller at heart. I love a good story where you are rooting for characters that you care about. And a lot of that passion you feel comes from a writer and an actor bringing a character to life that you can connect to. I want to be that actor for you. I've had experience in short films and theatre, but voice acting is where I shine brightest. I can play cackling crazies, nervous nerds, creatures of fantasy and mythology beyond imagination! If you need a voice to help bring your story to life, I've got the one that cooks. Also I like to cook at home. 
+I'm a storyteller at heart. I love a good story where you are rooting for characters that you care about. And a lot of that passion you feel comes from a writer and an actor bringing a character to life that you can connect to. I want to be that actor for you. I've had experience in short films and theatre, but voice acting is where I'm at my best. I can play cackling crazies, nervous nerds, creatures of fantasy and mythology beyond imagination! If you need a voice to help bring your story to life, I've got the one that cooks. Also I like to cook at home. 
 
 ## Testimonials
 
