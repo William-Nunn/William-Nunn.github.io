@@ -6,11 +6,13 @@ permalink: /about/
 
 # About Me
 
-Culpa qui hic quae porro. Cum quo eaque et cum totam est et harum. Et voluptate porro quaerat. Repudiandae quo sed sit sed amet amet soluta vel. Aliquam delectus et facere ducimus qui cupiditate qui. Natus enim dolores nam doloribus. Sunt quia impedit consequatur. Iusto laboriosam distinctio dignissimos ratione qui id. Est aut placeat aut velit. Delectus enim minima quia enim non commodi aliquam. Earum consequatur placeat qui tempore sint nulla. Modi eveniet nam suscipit qui temporibus. Id quo expedita veniam est saepe soluta aut. Vero iusto voluptatibus dolor. Et consequatur voluptatum accusamus ullam qui aut corrupti. Aut sunt veniam quibusdam omnis eos sunt quo non. Totam nisi commodi ullam repudiandae iusto aut maiores quis. Aut accusamus sint quod id vero et voluptatem distinctio. Quas quisquam quaerat aut voluptates magni. Vero deleniti molestiae eligendi quos ut officia autem totam.
+_"The mystery of life isn't a problem to solve, but a reality to experience."_- Frank Herbert. 
+
+I'm a storyteller at heart. I love a good story where you are rooting for characters that you care about. And a lot of that passion you feel comes from a writer and an actor bringing a character to life that you can connect to. I want to be that actor for you. I've had experience in short films and theatre, but voice acting is where I shine brightest. I can play cackling crazies, nervous nerds, creatures of fantasy and mythology beyond imagination! If you need a voice to help bring your story to life, I've got the one that cooks. Also I like to cook at home. 
 
 ## Testimonials
 
-🥸 This is sample content, and will eventually be filled in with real testimonials. 🥸
+_"William has a great affinity for storytelling and character creation. He is thoughtful in his work and brings a great energy to everything he does. Absolute pleasure to work with."_- **Carlyle DePriest**
 
 _"William's vocal impressions of demons are so convincing, I intuitively reached for my crucifix."_ - **John Q. Normal**
 
