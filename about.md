@@ -16,7 +16,7 @@ Email me anytime. I'd love to cook up something with you.
 
 ## Testimonials
 
-_"William has a great affinity for storytelling and character creation. He is thoughtful in his work and brings a great energy to everything he does. Absolute pleasure to work with."_- **Carlyle DePriest/(https://www.carlyledepriest.com/)**
+_"William has a great affinity for storytelling and character creation. He is thoughtful in his work and brings a great energy to everything he does. Absolute pleasure to work with."_- **Carlyle DePriest https://www.carlyledepriest.com/**
 
 _"William's vocal impressions of demons are so convincing, I intuitively reached for my crucifix."_ - **John Q. Normal**
 
