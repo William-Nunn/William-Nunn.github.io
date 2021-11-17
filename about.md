@@ -21,19 +21,4 @@ And while you're here, feel free to listen to my podcasts that are available on 
 _"William has a great affinity for storytelling and character creation. He is thoughtful in his work and brings a great energy to everything he does. Absolute pleasure to work with."_- **[Carlyle DePriest](https://www.carlyledepriest.com/)**
 
 
-## Etc.
-
-[Here's a link to the source code. This is how link colors should look.](https://github.com/William-Nunn/William-Nunn.github.io)
-
-
-## Markup
-
-`This is an example of markup`
-
-```
-This is an example of formatted markup
-```
-
-```
-This is an extremely long piece of formatted markup, it should scroll horizontally instead of continuing on to the next line. Excellent speech!... The gift of the silver tongue. They say it's the mark of a good officer... and of a liar!
 ```
