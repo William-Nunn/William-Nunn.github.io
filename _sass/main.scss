@@ -179,9 +179,6 @@ iframe {
     padding: 0.5em 1em;
     border-radius: 12px;
   }
-  a:hover {
-    text-decoration: none;
-  }
   .current-nav-link {
     a {
       background-color: $background-color;
@@ -193,6 +190,9 @@ iframe {
 #site-social-links {
   span {
     margin: 0 6px;
+  }
+  a:hover {
+    text-decoration: none;
   }
 }
 
