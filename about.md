@@ -6,7 +6,9 @@ permalink: /about/
 
 # About Me
 
-_"The mystery of life isn't a problem to solve, but a reality to experience."_- Frank Herbert. 
+> _"The mystery of life isn't a problem to solve, but a reality to experience."_
+>
+> Frank Herbert. 
 
 Where to start. First of all, hello there. Second, I'm a nerd. Probably should be aware of that right away. Third, I also love is voice acting! I love getting behind a microphone and play all sorts of characters. Whether they be caclking crazies, dragonborn bards, supervillains, gruff soldiers, nervous nerds, or just the guy next door, I'm more than happy to give your character the passion and attention it deserves in the epic story you want to bring to life! 
 
