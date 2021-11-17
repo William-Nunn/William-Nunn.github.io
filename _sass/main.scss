@@ -44,6 +44,11 @@ a:hover {
   text-decoration: underline;
 }
 
+blockquote {
+  padding-left: 10px;
+  border-left: 3px double $text-color;
+}
+
 pre {
   background: $background-color-formatting;
   padding: 5px;
