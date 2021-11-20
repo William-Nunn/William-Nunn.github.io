@@ -195,12 +195,25 @@ iframe {
   }
 }
 
+#site-external-links {
+  display: flex;
+  flex-direction: column;
+}
+
 #site-social-links {
+  display: flex;
+  justify-content: center;
   span {
     margin: 0 6px;
   }
   a:hover {
     text-decoration: none;
+  }
+}
+
+#site-email {
+  a {
+    color: $text-color;
   }
 }
 
