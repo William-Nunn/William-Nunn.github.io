@@ -1,4 +1,6 @@
-/******* Variables ********/
+/********************** 
+VARIABLES
+**********************/
 
 $background-color: #151515; // also used as the stroke or fill property for SVGs
 $text-color: #dcd6de;
@@ -12,7 +14,11 @@ $breakpoints-small: 900px;
 $breakpoints-medium: 1200px;
 $breakpoints-large: 1536px;
 
-/******* Generic *******/
+$breakpoints-nav: 650px;
+
+/****************
+GENERIC
+****************/
 
 body {
   margin: 0;
@@ -22,7 +28,7 @@ body {
   flex-direction: column;
   color: $text-color;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 24px;
+  font-size: 1.5em;
   font-weight: 300;
   -webkit-font-feature-settings: "kern" on, "liga" on, "calt" on, "onum", "pnum";
   -moz-font-feature-settings: "kern" on, "liga" on, "calt" on, "onum", "pnum";
@@ -40,21 +46,17 @@ a {
   text-decoration: none;
 }
 
-a:hover {
-  text-decoration: underline;
-}
-
 blockquote {
-  border-left: 5px double $text-color;
-  padding-left: 20px;
+  border-left: .25em double $text-color;
+  padding-left: 1em;
   text-align: center;
   margin-left: 0;
   margin-right: 0;
 }
 
 pre {
-  background: $background-color-formatting;
-  padding: 5px;
+  background-color: $background-color-formatting;
+  padding: .25em;
   overflow: auto;
   overflow-y: hidden;
 }
@@ -64,15 +66,17 @@ pre {
 iframe {
   border: none;
   min-width: 50vw;
-  margin: 36px 0;
+  margin: 1.5em 0;
   align-self: center;
-  @media screen and (min-width: $breakpoints-medium) {
+  @media (min-width: $breakpoints-medium) {
     min-width: unset;
     max-width: $breakpoints-medium;
   }
 }
 
-/******* MARKDOWN CONTENT *******/
+/*******************
+MARKDOWN CONTENT
+********************/
 // The most important block; everything here should allow for easy editing of content markdown files, without being concerned with HTML-specific markup.
 #content {
   box-sizing: border-box;
@@ -83,26 +87,29 @@ iframe {
   a {
     color: $link-color;
   }
+  a:hover {
+    text-decoration: underline;
+  }
   opacity: 0.9;
   min-height: 100%;
-  padding: 18px;
+  padding: .75em;
   @supports (padding-left: env(safe-area-inset-left)) {
-    padding-left: calc(env(safe-area-inset-left, 0) + 18px);
+    padding-left: calc(env(safe-area-inset-left, 0) + .75em);
   }
   @supports (padding-right: env(safe-area-inset-right)) {
-    padding-right: calc(env(safe-area-inset-right, 0) + 18px);
+    padding-right: calc(env(safe-area-inset-right, 0) + .75em);
   }
   width: 100%;
   max-width: $breakpoints-medium;
   background-color: $background-color;
-  border-radius: 24px;
-  margin: 10vh auto 5vh;
-  @supports (margin-bottom: env(safe-area-inset-bottom)) {
-    margin-bottom: calc(env(safe-area-inset-bottom, 0) + 5vh);
-  }
+  border-radius: 1em;
+  margin: 3em auto;
+  flex: 1 0 auto;
 }
 
-/******* HERO IMAGE - even works on IOS! *******/
+/********************************
+HERO IMAGE - even works on IOS! 
+********************************/
 
 #site-look-at-this-guy {
   background-image: url("/content/images/headshot.jpeg");
@@ -113,47 +120,138 @@ iframe {
   width: 100%;
   position: fixed;
   z-index: -9001; // WHAT?! -9000?
-  @media screen and (orientation: landscape) {
+  @media (orientation: landscape) {
     background-size: 100vw 100vh;
   }
 }
 
-/******* HEADER *******/
+/********************************
+ HEADER 
+ *******************************/
 
 #site-header {
   background-color: $primary-color;
   color: $background-color;
   opacity: .9;
-  padding: 16px 8px 16px 8px;
-  border-radius: 0 0 24px 24px;
+  padding: .66em .33em .66em .33em;
+  border-radius: 0 0 1em 1em;
+
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
-  @media screen and (max-width: $breakpoints-small) {
-    flex-direction: column;
-  }
+  
   @supports (padding-top: env(safe-area-inset-top)) {
-    padding-top: calc(env(safe-area-inset-top, 0) + 16px);
+    padding-top: calc(env(safe-area-inset-top, 0) + .66em);
   }
   @supports (padding-left: env(safe-area-inset-left)) {
-    padding-left: calc(env(safe-area-inset-left, 0) + 8px);
+    padding-left: calc(env(safe-area-inset-left, 0) + .33em);
   }
   @supports (padding-right: env(safe-area-inset-right)) {
-    padding-right: calc(env(safe-area-inset-right, 0) + 8px);
+    padding-right: calc(env(safe-area-inset-right, 0) + .33em);
   }
-}
 
-#header-left {
-  display: flex;
-  flex-direction: column;
-  @media screen and (max-width: $breakpoints-small) {
-    margin: 1em 0;
+  h1 {
+    a {
+      display: flex;
+      flex-direction: column;
+      color: unset;
+    }
+    font-size: unset;
+    font-weight: unset;
+    margin: unset;
+  }
+  input {
+    position: absolute;
+    top: -100%;
+    display: none; // hide tabindex for larger widths
+  }
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 0;
+    a {
+      margin: 0 .25em;
+    }
+    a:hover, a:focus {
+      background-color: #{$background-color}33;
+    }
+  }
+  @media (max-width: $breakpoints-nav) {
+    flex-direction: column;
+    h1 {
+      align-self: start;
+    }
+    ul {
+      margin: 0;
+      padding-bottom: .5em;
+      clear: both;
+      display: none;
+      overflow: hidden;
+      li {
+        margin-top: 1em;
+      }
+    }
+    input {
+      display: block;
+    }
+    #site-nav-toggle + label {
+      padding: 0.25em;
+      border: 2px solid $background-color;
+      background-color: $background-color;
+      color: $text-color;
+      border-radius: 0.5em;
+      position: absolute;
+      right: .75em;
+      top: 1.25em;
+      cursor: pointer;
+    }
+    #site-nav-toggle:focus + label, 
+    #site-nav-toggle + label:hover {
+      background-color: $background-color;
+      border: 2px solid $text-color ;
+    }
+    #site-nav-toggle + label:after, 
+    #site-nav-toggle + label:before {
+      content:"";
+      display:block;
+      width:1.5em;
+      height:0.25em;
+      border:solid $text-color;
+      border-width:0.25em 0;
+    }
+    #site-nav-toggle + label:after {
+      border-top: 0;
+    }
+    #site-nav-toggle:checked + label {
+      background-color: #{$background-color}99;
+    }
+    #site-nav-toggle:checked ~ ul {
+      display: flex;
+    }
+  }
+
+  a {
+    color: $background-color;
+    padding: 0.5em;
+    border-radius: .5em;
+  }
+  .current-nav-link {
+    a {
+      background-color: $background-color;
+      color: $primary-color;
+    }
+    a:hover, a:focus {
+      background-color: $background-color;
+    }
   }
 }
 
 #header-real-name {
-  font-size: 36px;
+  font-size: 1.5em;
   font-weight: 400;
 }
 
@@ -161,63 +259,52 @@ iframe {
   font-style: oblique;
 }
 
-#site-nav {
-  @media screen and (max-width: $breakpoints-small) {
-    // site nav should be in the center if header is horizontal, and at the bottom if header is vertical
-    order: 9001; // WHAT?! 9000?
-  }
-  ul {
-    list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 0;
-  }
-  @media screen and (max-width: $breakpoints-xs) {
-    ul {
-      flex-direction: column;
-      margin: 0 0 12px 0;
-      li {
-        margin-top: 24px;
-      }
-    }
-  }
-  a {
-    color: $background-color;
-    padding: 0.5em 1em;
-    border-radius: 12px;
-  }
-  .current-nav-link {
-    a {
-      background-color: $background-color;
-      color: $primary-color;
-    }
-  }
-}
+/*****************************************
+FOOTER
+*****************************************/
 
-#site-external-links {
+#site-footer {
+  background-color: $primary-color;
+  color: $background-color;
+  opacity: .9;
+  padding: .66em .33em .66em .33em;
+  border-radius: 1em 1em 0 0;
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  @media (max-width: $breakpoints-small) {
+    flex-direction: column;
+  }
+  @supports (padding-bottom: env(safe-area-inset-bottom)) {
+    padding-bottom: calc(env(safe-area-inset-bottom, 0) + .66em);
+  }
+  @supports (padding-left: env(safe-area-inset-left)) {
+    padding-left: calc(env(safe-area-inset-left, 0) + .33em);
+  }
+  @supports (padding-right: env(safe-area-inset-right)) {
+    padding-right: calc(env(safe-area-inset-right, 0) + .33em);
+  }
 }
 
 #site-social-links {
   display: flex;
   justify-content: center;
   span {
-    margin: 0 6px;
-  }
-  a:hover {
-    text-decoration: none;
+    margin: 0 1em;
   }
 }
 
 #site-email {
-  a {
-    color: $text-color;
-  }
+  color: $background-color;
 }
 
-/******* classes *******/
+#site-email:hover {
+  text-decoration: underline;
+}
+
+/************************* 
+CLASSES 
+*************************/
 
 .center {
   max-width: $breakpoints-medium;

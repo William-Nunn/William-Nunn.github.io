@@ -2,8 +2,8 @@
 
 # Jekyll stuff
 /_site
-.jekyll-metadata
-.jekyll-cache
+/.jekyll-metadata
+/.jekyll-cache
 /gemfiles/
 /vendor/
 

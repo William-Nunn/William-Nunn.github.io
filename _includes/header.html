@@ -1,9 +1,12 @@
 <header id="site-header">
-  <section id="header-left">
-    <span id="header-real-name">William Nunn</span>
-    <span id="header-pseudonym">The Voice That Cooks</span>
-  </section>
-  <nav id="site-nav">
+  <h1>
+    <a href="{{site.baseurl}}">
+      <span id="header-real-name">William Nunn</span>
+      <span id="header-pseudonym">The Voice That Cooks</span>
+    </a>
+  </h1>
+    <input id="site-nav-toggle" type="checkbox" />
+    <label for="site-nav-toggle"></label>
     <ul>
       {% for p in site.data.header_nav -%}
       <li
@@ -15,7 +18,6 @@
       >
         <a 
           href="{{ p.link | relative_url }}" 
-          title="{{p.title}}"
           {% if p.openNewTab %} target="_blank" rel="noopener noreferrer" {%- endif -%}
         >
           {{ p.title | escape }}
@@ -23,31 +25,4 @@
       </li>
       {% endfor -%}
     </ul>
-  </nav>
-  <div id="site-external-links">
-    <section id="site-social-links">
-      <span>
-        <a
-          href="https://twitter.com/{{site.twitter.username}}"
-          title="@{{site.twitter.username}}"
-        >
-          <img src="{{ 'content/icons/twitter.svg' | relative_url }}" alt="Twitter - @{{site.twitter.username}}" height="48" width="48" />
-        </a>
-      </span>
-      <span>
-        <a
-          href="https://instagram.com/{{site.instagram.username}}"
-          title="@{{site.instagram.username}}"
-        >
-          <img src="{{ 'content/icons/instagram.svg' | relative_url }}" alt="Instagram - @{{site.instagram.username}}" height="48" width="48" />
-        </a>
-      </span>
-      <span>
-        <a href="mailto:{{site.email}}" title="{{site.email}}">
-          <img src="{{ 'content/icons/envelope.svg' | relative_url }}" alt="Email - {{site.email}}" height="48" width="48" />
-        </a>
-      </span>
-    </section>
-    <section id="site-email"><a href="mailto:{{site.email}}">{{site.email}}</a></section>
-  </div>
 </header>

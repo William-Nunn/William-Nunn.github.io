@@ -1,6 +1,9 @@
 ---
 layout: default
+title: ''
 ---
+
+## Showcase
 
 <iframe 
   src="https://open.spotify.com/embed/show/7Ewd7bSxDH4dbvkfT6YCt2?utm_source=generator" 

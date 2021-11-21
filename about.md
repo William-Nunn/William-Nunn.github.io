@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-# About Me
+## About Me
 
 > _"The mystery of life isn't a problem to solve, but a reality to experience."_
 >
