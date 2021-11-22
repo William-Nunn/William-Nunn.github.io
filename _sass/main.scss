@@ -3,8 +3,8 @@ VARIABLES
 **********************/
 
 $background-color: #151515; // also used as the stroke or fill property for SVGs
-$text-color: #dcd6de;
-$primary-color: #aa3d01; // also used in _config.yml
+$text-color: #EAEAEA;
+$primary-color: #f26500; // also used in _config.yml
 $link-color: #b5e853;
 $background-color-formatting: #000000;
 
@@ -23,7 +23,7 @@ GENERIC
 body {
   margin: 0;
   min-height: 100vh;
-  line-height: 1.15em;
+  line-height: 1.5em;
   display: flex;
   flex-direction: column;
   color: $text-color;
@@ -166,6 +166,9 @@ HERO IMAGE - even works on IOS!
     top: -100%;
     display: none; // hide tabindex for larger widths
   }
+  label {
+    display: none;
+  }
   ul {
     list-style-type: none;
     display: flex;
@@ -195,7 +198,7 @@ HERO IMAGE - even works on IOS!
         margin-top: 1em;
       }
     }
-    input {
+    input, label {
       display: block;
     }
     #site-nav-toggle + label {

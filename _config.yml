@@ -19,7 +19,7 @@ defaults:
     image: "/content/images/headshot.jpeg" # embed image on social media cards
 
 # this is only for phone header colors, the actual website colors will be configured in a .scss file
-theme-color: "#aa3d01"
+theme-color: "#f26500"
 
 ### !!! Nothing below this line should ever need to be edited !!! ###
 

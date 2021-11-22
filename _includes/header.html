@@ -1,28 +1,24 @@
 <header id="site-header">
   <h1>
-    <a href="{{site.baseurl}}">
+    <a href="{{ '/' | relative_url}}">
       <span id="header-real-name">William Nunn</span>
       <span id="header-pseudonym">The Voice That Cooks</span>
     </a>
   </h1>
-    <input id="site-nav-toggle" type="checkbox" />
-    <label for="site-nav-toggle"></label>
-    <ul>
-      {% for p in site.data.header_nav -%}
-      <li
-        {%- if p.link == '/' -%}
-          {% if page.url == p.link %} class="current-nav-link" {%- endif -%}
-        {% else -%}
-          {% if page.url contains p.link %} class="current-nav-link" {%- endif -%}
-        {% endif -%}
+  <input id="site-nav-toggle" type="checkbox" />
+  <label for="site-nav-toggle" aria-label="Toggle navigation display"></label>
+  <ul>
+    {% for p in site.data.header_nav -%}
+    <li
+      {% if page.url == p.link %} class="current-nav-link" {%- endif -%}
+    >
+      <a 
+        href="{{ p.link | relative_url }}" 
+        {% if p.openNewTab %} target="_blank" rel="noopener noreferrer" {%- endif -%}
       >
-        <a 
-          href="{{ p.link | relative_url }}" 
-          {% if p.openNewTab %} target="_blank" rel="noopener noreferrer" {%- endif -%}
-        >
-          {{ p.title | escape }}
-        </a>
-      </li>
-      {% endfor -%}
-    </ul>
+        {{ p.title | escape }}
+      </a>
+    </li>
+    {% endfor -%}
+  </ul>
 </header>
