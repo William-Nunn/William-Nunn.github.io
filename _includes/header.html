@@ -1,13 +1,13 @@
 <header id="site-header">
   <h1>
-    <a href="{{ '/' | relative_url}}">
+    <a href="{{ '/' | relative_url }}">
       <span id="header-real-name">William Nunn</span>
       <span id="header-pseudonym">The Voice That Cooks</span>
     </a>
   </h1>
   <input id="site-nav-toggle" type="checkbox" />
-  <label for="site-nav-toggle" aria-label="Toggle navigation display"></label>
-  <ul>
+  <label for="site-nav-toggle" aria-label="Toggle navigation display"><span></span></label>
+  <ul role="navigation">
     {% for p in site.data.header_nav -%}
     <li
       {% if page.url == p.link %} class="current-nav-link" {%- endif -%}

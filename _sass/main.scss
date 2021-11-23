@@ -14,7 +14,8 @@ $breakpoints-small: 900px;
 $breakpoints-medium: 1200px;
 $breakpoints-large: 1536px;
 
-$breakpoints-nav: 650px;
+$breakpoints-nav: 768px;
+$nav-transition-height: 300px; // probably needs to be rountinely increased if more nav links are added
 
 /****************
 GENERIC
@@ -140,6 +141,7 @@ HERO IMAGE - even works on IOS!
   flex-direction: row;
   align-items: center;
   justify-content: space-around;
+  flex-wrap: wrap;
   
   @supports (padding-top: env(safe-area-inset-top)) {
     padding-top: calc(env(safe-area-inset-top, 0) + .66em);
@@ -161,94 +163,132 @@ HERO IMAGE - even works on IOS!
     font-weight: unset;
     margin: unset;
   }
-  input {
+  #site-nav-toggle {
     position: absolute;
     top: -100%;
     display: none; // hide tabindex for larger widths
+    &:checked {
+      ~ label span {
+        background-color: transparent;
+        &::before {
+          transform: rotate(-45deg);
+          top: 0;
+        }
+        &::after {
+          transform: rotate(45deg);
+          top: 0;
+        }
+      }
+    }
   }
-  label {
+  #site-nav-toggle + label {
     display: none;
+    align-items: center;
+    cursor: pointer;
+    background-color: $background-color;
+    border-radius: 8px;
+    height: 1.25em;
+    padding: .2em;
+
+    span {
+      background-color: $primary-color;
+      display: block;
+      height: 4px;
+      position: relative;
+      transition: background-color .2s ease-out;
+      width: 36px;
+      &::before, &::after {
+        background-color: $primary-color;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+        width: 100%;
+      }
+      &::before {
+        top: 10px;
+      }
+      &::after {
+        top: -10px;
+      }
+    }
+    
+    &:hover {
+      background-color: #{$background-color}88;
+    }
+  }
+  #site-nav-toggle:focus + label {
+    outline: 2px solid $text-color;
   }
   ul {
     list-style-type: none;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
+    display: block;
     padding-left: 0;
+    margin: 0;
+    clear: none;
+    float: right;
+    overflow: hidden;
+    li {
+      float: left;
+    }
     a {
-      margin: 0 .25em;
+      margin: 3px .25em 0;
+      padding: 0.5em 1em;
+      border: 2px solid $background-color;
+      display: block;
     }
     a:hover, a:focus {
-      background-color: #{$background-color}33;
+      background-color: #{$background-color}aa;
+      color: #{$primary-color}aa;
+    }
+    a:focus {
+      border: none;
     }
   }
-  @media (max-width: $breakpoints-nav) {
-    flex-direction: column;
+  @media print {
+    ul {
+      display: none;
+    }
+  }
+  @media screen and (max-width: $breakpoints-nav) {
     h1 {
       align-self: start;
     }
-    ul {
-      margin: 0;
-      padding-bottom: .5em;
-      clear: both;
-      display: none;
-      overflow: hidden;
-      li {
-        margin-top: 1em;
-      }
-    }
-    input, label {
+    #site-nav-toggle {
       display: block;
     }
     #site-nav-toggle + label {
-      padding: 0.25em;
-      border: 2px solid $background-color;
-      background-color: $background-color;
-      color: $text-color;
-      border-radius: 0.5em;
-      position: absolute;
-      right: .75em;
-      top: 1.25em;
-      cursor: pointer;
+      display: inline-flex;
     }
-    #site-nav-toggle:focus + label, 
-    #site-nav-toggle + label:hover {
-      background-color: $background-color;
-      border: 2px solid $text-color ;
-    }
-    #site-nav-toggle + label:after, 
-    #site-nav-toggle + label:before {
-      content:"";
-      display:block;
-      width:1.5em;
-      height:0.25em;
-      border:solid $text-color;
-      border-width:0.25em 0;
-    }
-    #site-nav-toggle + label:after {
-      border-top: 0;
-    }
-    #site-nav-toggle:checked + label {
-      background-color: #{$background-color}99;
+    ul {
+      flex-basis: 100%;
+      max-height: 0;
+      visibility: hidden;
+      transition: all .5s ease-out;
+      li {
+        float: none;
+        text-align: center;
+        margin: .5em 0;
+      }
+      a {
+        margin: 0 2em;
+      }
     }
     #site-nav-toggle:checked ~ ul {
-      display: flex;
+      max-height: $nav-transition-height;
+      visibility: visible;
     }
   }
 
   a {
     color: $background-color;
-    padding: 0.5em;
     border-radius: .5em;
   }
   .current-nav-link {
     a {
       background-color: $background-color;
       color: $primary-color;
-    }
-    a:hover, a:focus {
-      background-color: $background-color;
     }
   }
 }
