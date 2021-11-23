@@ -14,7 +14,7 @@ I am called The Voice That Cooks. It's not just because I'm a voice actor who lo
 
 I'd love to cook something up with you! Email me anytime at [{{site.email}}](mailto:{{site.email}})
 
-While you're here, feel free to listen to my podcasts that are available on my website: Voices That Cook and One Shots: D&D Character Podcast! 
+While you're here, feel free to listen to my character demo and my podcasts that are available on my website: Voices That Cook and One Shots: D&D Character Podcast! 
 
 ## Testimonials
 
