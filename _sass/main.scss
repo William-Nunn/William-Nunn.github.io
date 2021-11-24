@@ -39,7 +39,8 @@ body {
 }
 
 hr {
-  display: none;
+  // IOS seems to override display: none, so don't rely on <hr> for strictly semantic purposes
+  border-width: 0;
 }
 
 img {
@@ -52,7 +53,7 @@ a {
 }
 
 blockquote {
-  border-left: 0.25em double $text-color;
+  border-left: 0.25em double $primary-color;
   padding-left: 1em;
   text-align: center;
   margin-left: 0;
@@ -71,7 +72,6 @@ pre {
 iframe {
   border: none;
   max-width: 100%;
-  margin-bottom: 1.5em;
   align-self: center;
   @media (min-width: $breakpoints-medium) {
     max-width: $breakpoints-medium;
@@ -83,6 +83,8 @@ MARKDOWN CONTENT
 ********************/
 // The most important block; everything here should allow for easy editing of content markdown files, without being concerned with HTML-specific markup.
 #content {
+  display: flex;
+  flex-direction: column;
   box-sizing: border-box;
   p {
     margin-top: 0;
@@ -267,9 +269,6 @@ HERO IMAGE - even works on IOS!
     }
   }
   @media screen and (max-width: $breakpoints-nav) {
-    h1 {
-      align-self: start;
-    }
     #site-nav-toggle {
       display: block;
     }
@@ -362,7 +361,5 @@ CLASSES
 
 // add this class to any link element associated with an iframe
 .iframe-backup-link {
-  position: relative;
-  bottom: 2em;
   font-size: 0.75em;
 }

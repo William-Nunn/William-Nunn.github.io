@@ -17,11 +17,11 @@ title: "Showcase"
 
 ## Podcasts
 
-<iframe 
+<iframe
   src="https://open.spotify.com/embed/show/7Ewd7bSxDH4dbvkfT6YCt2?utm_source=generator"
   title="Voices That Cook Podcast"
   width="100%" 
-  height="232" 
+  height="232"
   allow="clipboard-write"
   loading="lazy"
 ></iframe>
@@ -30,10 +30,10 @@ title: "Showcase"
 
 ---
 
-<iframe 
+<iframe
   src="https://open.spotify.com/embed/show/1dX36qipnRNBGu1MYpvHcA?utm_source=generator"
   title="One Shots: D&D Character Podcast"
-  width="100%" 
+  width="100%"
   height="232"
   allow="clipboard-write"
   loading="lazy"
