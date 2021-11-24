@@ -7,7 +7,7 @@
   </h1>
   <input id="site-nav-toggle" type="checkbox" />
   <label for="site-nav-toggle" aria-label="Toggle navigation display"><span></span></label>
-  <ul role="navigation">
+  <ul>
     {% for p in site.data.header_nav -%}
     <li
       {% if page.url == p.link %} class="current-nav-link" {%- endif -%}

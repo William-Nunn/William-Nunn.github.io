@@ -2,7 +2,6 @@
 
 <footer id="site-footer">
   <div id="site-social-links">
-    <span>
       <a
         href="https://twitter.com/{{site.twitter.username}}"
         title="@{{site.twitter.username}}"
@@ -14,8 +13,6 @@
           width="{{iconSize}}"
         />
       </a>
-    </span>
-    <span>
       <a
         href="https://instagram.com/{{site.instagram.username}}"
         title="@{{site.instagram.username}}"
@@ -27,8 +24,6 @@
           width="{{iconSize}}"
         />
       </a>
-    </span>
-    <span>
       <a href="mailto:{{site.email}}" title="{{site.email}}">
         <img
           src="{{ 'content/icons/envelope.svg' | relative_url }}"
@@ -37,8 +32,6 @@
           width="{{iconSize}}"
         />
       </a>
-    </span>
-    <span>
       <a href="{{ 'feed.xml' | relative_url }}" title="RSS Feed">
         <img
           src="{{ 'content/icons/rss.svg' | relative_url }}"
@@ -47,7 +40,7 @@
           width="{{iconSize}}"
         />
       </a>
-    </span>
   </div>
+  <hr />
   <a id="site-email" href="mailto:{{site.email}}">{{site.email}}</a>
 </footer>

@@ -3,7 +3,7 @@ VARIABLES
 **********************/
 
 $background-color: #151515; // also used as the stroke or fill property for SVGs
-$text-color: #EAEAEA;
+$text-color: #eaeaea;
 $primary-color: #f26500; // also used in _config.yml
 $link-color: #b5e853;
 $background-color-formatting: #000000;
@@ -38,6 +38,10 @@ body {
   font-feature-settings: "kern" on, "liga" on, "calt" on, "onum", "pnum";
 }
 
+hr {
+  display: none;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -48,7 +52,7 @@ a {
 }
 
 blockquote {
-  border-left: .25em double $text-color;
+  border-left: 0.25em double $text-color;
   padding-left: 1em;
   text-align: center;
   margin-left: 0;
@@ -57,7 +61,7 @@ blockquote {
 
 pre {
   background-color: $background-color-formatting;
-  padding: .25em;
+  padding: 0.25em;
   overflow: auto;
   overflow-y: hidden;
 }
@@ -66,11 +70,10 @@ pre {
 // We can reasonably make the width/horizontal positioning of all iframes good from here, but height will usually have to be modified from content pages.
 iframe {
   border: none;
-  min-width: 50vw;
-  margin: 1.5em 0;
+  max-width: 100%;
+  margin-bottom: 1.5em;
   align-self: center;
   @media (min-width: $breakpoints-medium) {
-    min-width: unset;
     max-width: $breakpoints-medium;
   }
 }
@@ -81,6 +84,9 @@ MARKDOWN CONTENT
 // The most important block; everything here should allow for easy editing of content markdown files, without being concerned with HTML-specific markup.
 #content {
   box-sizing: border-box;
+  p {
+    margin-top: 0;
+  }
   img {
     margin: 0 auto;
     display: block;
@@ -93,12 +99,12 @@ MARKDOWN CONTENT
   }
   opacity: 0.9;
   min-height: 100%;
-  padding: .75em;
+  padding: 0.75em;
   @supports (padding-left: env(safe-area-inset-left)) {
-    padding-left: calc(env(safe-area-inset-left, 0) + .75em);
+    padding-left: calc(env(safe-area-inset-left, 0) + 0.75em);
   }
   @supports (padding-right: env(safe-area-inset-right)) {
-    padding-right: calc(env(safe-area-inset-right, 0) + .75em);
+    padding-right: calc(env(safe-area-inset-right, 0) + 0.75em);
   }
   width: 100%;
   max-width: $breakpoints-medium;
@@ -133,8 +139,8 @@ HERO IMAGE - even works on IOS!
 #site-header {
   background-color: $primary-color;
   color: $background-color;
-  opacity: .9;
-  padding: .66em .33em .66em .33em;
+  opacity: 0.9;
+  padding: 0.66em 0.33em 0.66em 0.33em;
   border-radius: 0 0 1em 1em;
 
   display: flex;
@@ -142,15 +148,15 @@ HERO IMAGE - even works on IOS!
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  
+
   @supports (padding-top: env(safe-area-inset-top)) {
-    padding-top: calc(env(safe-area-inset-top, 0) + .66em);
+    padding-top: calc(env(safe-area-inset-top, 0) + 0.66em);
   }
   @supports (padding-left: env(safe-area-inset-left)) {
-    padding-left: calc(env(safe-area-inset-left, 0) + .33em);
+    padding-left: calc(env(safe-area-inset-left, 0) + 0.33em);
   }
   @supports (padding-right: env(safe-area-inset-right)) {
-    padding-right: calc(env(safe-area-inset-right, 0) + .33em);
+    padding-right: calc(env(safe-area-inset-right, 0) + 0.33em);
   }
 
   h1 {
@@ -162,6 +168,13 @@ HERO IMAGE - even works on IOS!
     font-size: unset;
     font-weight: unset;
     margin: unset;
+    #header-real-name {
+      font-size: 1.5em;
+      font-weight: 400;
+    }
+    #header-pseudonym {
+      font-style: oblique;
+    }
   }
   #site-nav-toggle {
     position: absolute;
@@ -188,22 +201,23 @@ HERO IMAGE - even works on IOS!
     background-color: $background-color;
     border-radius: 8px;
     height: 1.25em;
-    padding: .2em;
+    padding: 0.2em;
 
     span {
       background-color: $primary-color;
       display: block;
       height: 4px;
       position: relative;
-      transition: background-color .2s ease-out;
+      transition: background-color 0.2s ease-out;
       width: 36px;
-      &::before, &::after {
+      &::before,
+      &::after {
         background-color: $primary-color;
-        content: '';
+        content: "";
         display: block;
         height: 100%;
         position: absolute;
-        transition: all .2s ease-out;
+        transition: all 0.2s ease-out;
         width: 100%;
       }
       &::before {
@@ -213,7 +227,7 @@ HERO IMAGE - even works on IOS!
         top: -10px;
       }
     }
-    
+
     &:hover {
       background-color: #{$background-color}88;
     }
@@ -233,12 +247,13 @@ HERO IMAGE - even works on IOS!
       float: left;
     }
     a {
-      margin: 3px .25em 0;
+      margin: 3px 0.25em 0;
       padding: 0.5em 1em;
       border: 2px solid $background-color;
       display: block;
     }
-    a:hover, a:focus {
+    a:hover,
+    a:focus {
       background-color: #{$background-color}aa;
       color: #{$primary-color}aa;
     }
@@ -265,11 +280,11 @@ HERO IMAGE - even works on IOS!
       flex-basis: 100%;
       max-height: 0;
       visibility: hidden;
-      transition: all .5s ease-out;
+      transition: all 0.5s ease-out;
       li {
         float: none;
         text-align: center;
-        margin: .5em 0;
+        margin: 0.5em 0;
       }
       a {
         margin: 0 2em;
@@ -283,7 +298,7 @@ HERO IMAGE - even works on IOS!
 
   a {
     color: $background-color;
-    border-radius: .5em;
+    border-radius: 0.5em;
   }
   .current-nav-link {
     a {
@@ -293,15 +308,6 @@ HERO IMAGE - even works on IOS!
   }
 }
 
-#header-real-name {
-  font-size: 1.5em;
-  font-weight: 400;
-}
-
-#header-pseudonym {
-  font-style: oblique;
-}
-
 /*****************************************
 FOOTER
 *****************************************/
@@ -309,8 +315,8 @@ FOOTER
 #site-footer {
   background-color: $primary-color;
   color: $background-color;
-  opacity: .9;
-  padding: .66em .33em .66em .33em;
+  opacity: 0.9;
+  padding: 0.66em 0.33em 0.66em 0.33em;
   border-radius: 1em 1em 0 0;
   display: flex;
   align-items: center;
@@ -319,20 +325,20 @@ FOOTER
     flex-direction: column;
   }
   @supports (padding-bottom: env(safe-area-inset-bottom)) {
-    padding-bottom: calc(env(safe-area-inset-bottom, 0) + .66em);
+    padding-bottom: calc(env(safe-area-inset-bottom, 0) + 0.66em);
   }
   @supports (padding-left: env(safe-area-inset-left)) {
-    padding-left: calc(env(safe-area-inset-left, 0) + .33em);
+    padding-left: calc(env(safe-area-inset-left, 0) + 0.33em);
   }
   @supports (padding-right: env(safe-area-inset-right)) {
-    padding-right: calc(env(safe-area-inset-right, 0) + .33em);
+    padding-right: calc(env(safe-area-inset-right, 0) + 0.33em);
   }
 }
 
 #site-social-links {
   display: flex;
   justify-content: center;
-  span {
+  a {
     margin: 0 1em;
   }
 }
@@ -352,4 +358,11 @@ CLASSES
 .center {
   max-width: $breakpoints-medium;
   margin: 0 auto;
+}
+
+// add this class to any link element associated with an iframe
+.iframe-backup-link {
+  position: relative;
+  bottom: 2em;
+  font-size: 0.75em;
 }
