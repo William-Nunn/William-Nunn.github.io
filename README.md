@@ -2,7 +2,7 @@
 
 Personal website of William Nunn / VoiceThatCooks
 
-Hosted at https://william-nunn.github.io/
+Hosted at https://williamnunnvo.com
 
 Built by [Lance Drane](https://github.com/Lance-Drane)
 
@@ -26,6 +26,8 @@ If you want to add an entirely new page, edit `_data/header_nav.yml` to update t
 ### IFrame rules
 
 Sometimes, the default iframe embed code from a website can have some wonky dimensions. Feel free to play around with the width and the height variables. In general, you should always use a `%` based value for the `width` (i.e. 100%), and a regular number (no `%`) for the iframe `height` (i.e. 232).
+
+Make sure you add `loading="lazy"` AND a `title` attribute with a good descriptor, i.e. `<iframe title="Spotify showcase" loading="lazy">`, to all iframe code.
 
 Iframes will be centered by default inside the content wrapper.
 
