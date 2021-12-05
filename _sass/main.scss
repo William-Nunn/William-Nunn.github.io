@@ -121,6 +121,8 @@ MARKDOWN CONTENT
  ********************************/
  .site-skip-link {
   background-color: $link-color;
+  color: $background-color;
+  border-radius: 0.5em;
   opacity: 1;
   z-index: 9001;
   padding: 8px;
@@ -129,7 +131,7 @@ MARKDOWN CONTENT
   transform: translateY(-200%);
   transition: transform 0.3s;
   &:focus {
-    transform: translateY(0%);
+    transform: translateY(10%);
   }
 }
 
