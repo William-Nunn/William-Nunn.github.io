@@ -1,9 +1,10 @@
 ### Website properties ###
 
-# title that is included in every browser tab. You can include an additonal title on each content page, which will make the title look like "{{CONTENT_TITLE}} | {{WEBSITE_TITLE}}"
-title: William Nunn
-name: William Nunn
-description: >-
+# title that is included in every browser tab. You can include an additonal title on each content page, which will make the title look like "{{CONTENT_TITLE}} | {{WEBSITE_TITLE}}" 
+# if you do not explicitly specify the title, {{CONTENT_TITLE}} will be set as the value of the first header it sees
+# if you explicitly specify the title to equal "" (or have no headers - don't do it this way though!), it will use the format "WEBSITE_TITLE | WEBSITE_DESCRIPTION", both of which are defined below
+title: William Nunn # website title
+description: >- # website description
   Voice Actor, Writer, & Creator of Audio Dramas/One Shots: D&D Character Podcast!
 email: wnunnVO2814@gmail.com
 twitter:
@@ -16,9 +17,13 @@ defaults:
   - scope:
       path: ""
     values:
-      image: "/content/images/headshot.jpeg" # embed image on social media cards
+      image:
+        path: "/content/images/headshot.jpeg" # embed image on social media cards
+        alt: "William Nunn's Website"
+        width: 478
+        height: 598
 
-# this is only for phone header colors, the actual website colors will be configured in a .scss file
+# this is only for phone header colors and for certain iframe parameters, the actual website colors will be configured in a .scss file
 theme-color: "#f26500"
 
 ### !!! Nothing below this line should ever need to be edited !!! ###
