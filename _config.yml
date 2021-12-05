@@ -57,7 +57,7 @@ compress_html:
     envs: []
   blanklines: false
   profile: false
-  startings: [html, head, body]
+  startings: [head, body]
 
 livereload: true
 incremental: true # note: GH-Pages will always have this set to "false", but still helpful for local development

@@ -117,6 +117,24 @@ MARKDOWN CONTENT
 }
 
 /********************************
+ SKIP TO CONTENT (for easier keyboard navigation)
+ ********************************/
+ .site-skip-link {
+  background-color: $link-color;
+  opacity: 1;
+  z-index: 9001;
+  padding: 8px;
+  position: absolute;
+  left: 50%;
+  transform: translateY(-200%);
+  transition: transform 0.3s;
+  &:focus {
+    transform: translateY(0%);
+  }
+}
+
+
+/********************************
 HERO IMAGE - even works on IOS! 
 ********************************/
 
