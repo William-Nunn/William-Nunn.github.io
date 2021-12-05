@@ -1,0 +1,37 @@
+// the higher the number, the faster the sword translates itself along the y-axis. if this value is too low, the sword won't disappear
+$offscreen-amount: 2em;
+
+@keyframes middle-saber-in {
+  0% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-90deg)
+      translate($offscreen-amount, 0%);
+  }
+}
+
+@keyframes middle-saber-out {
+  0% {
+    transform: translate(-50%, -$offscreen-amount) rotate(-90deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) rotate(-90deg);
+  }
+
+  100% {
+    transform: translate(-50%, -50%) rotate(180deg);
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

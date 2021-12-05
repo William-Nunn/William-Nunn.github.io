@@ -183,15 +183,21 @@ HERO IMAGE - even works on IOS!
     top: -100%;
     display: none; // hide tabindex for larger widths
     &:checked {
-      ~ label span {
-        background-color: transparent;
-        &::before {
-          transform: rotate(-45deg);
-          top: 0;
+      ~ label {
+        .fight-saber {
+          border-radius: 3px;
+          top: 50% !important; // need the !important because each individual saber has their top defined by id if not checked
+          transition: top 0.4s ease, transform 0.4s ease;
         }
-        &::after {
-          transform: rotate(45deg);
-          top: 0;
+        #top-saber {
+          transform: translate(-50%, -50%) rotate(-225deg);
+        }
+        #bottom-saber {
+          transform: translate(-50%, -50%) rotate(405deg);
+        }
+        #middle-saber {
+          transform: translate(-50%, -50%) rotate(-90deg);
+          animation: middle-saber-in 0.5s ease forwards;
         }
       }
     }
@@ -202,36 +208,79 @@ HERO IMAGE - even works on IOS!
     cursor: pointer;
     background-color: $background-color;
     border-radius: 8px;
-    height: 1.25em;
-    padding: 0.2em;
+    height: 1.9em;
+    width: 1.9em;
+    padding: 0.1em;
+
+    // TODO this whole "div" section is kind of a sloppy hack, it's used to fade in the sabers onload while keeping the user from seeing the saber animation
+    div {
+      opacity: 0; // TODO kind of hackish, may need to resort to Javascript here
+      animation: fadein 0.2s ease 0.5s forwards; // TODO hackish solution used with opacity to stop the saber animation from playing the first time
+      position: relative;
+      overflow: hidden; // keeps middle sword hidden outside of div when it leaves
+      width: 100%;
+      height: 100%;
+    }
 
     span {
-      background-color: $primary-color;
       display: block;
-      height: 4px;
-      position: relative;
-      transition: background-color 0.2s ease-out;
-      width: 36px;
-      &::before,
-      &::after {
-        background-color: $primary-color;
+      position: absolute;
+      height: 25%;
+      width: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(0deg);
+      transform-origin: 50% 50%;
+      transition: top 0.4s ease 0.4s, transform 0.4s ease 0.4s;
+      &:before,
+      &:after {
         content: "";
         display: block;
-        height: 100%;
+        height: 40%;
+        background-color: $text-color;
         position: absolute;
-        transition: all 0.2s ease-out;
-        width: 100%;
+        top: 50%;
+        transform: translate(0%, -45%);
+        transition: background-color 0.2s ease, box-shadow 0.2s ease;
       }
-      &::before {
-        top: 10px;
+      &:before {
+        left: 0;
+        width: calc(-1px + 75%);
+        border-radius: 10em 0 0 10em;
+        background-color: $primary-color;
       }
-      &::after {
-        top: -10px;
+      &:after {
+        right: 0;
+        width: calc(-1px + 25%);
+        height: 2px;
       }
     }
 
+    #top-saber {
+      top: 20%;
+    }
+    #bottom-saber {
+      top: 80%;
+    }
+    #middle-saber {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(180deg);
+      animation: middle-saber-out 0.5s ease forwards;
+    }
+
     &:hover {
-      background-color: #{$background-color}88;
+      // box-shadow blur-radius needs to be slightly smaller than label padding
+      #top-saber:before {
+        background-color: #eaaaaa;
+        box-shadow: 0 0 0.19em 0.05em #f00;
+      }
+      #middle-saber:before {
+        background-color: #aaeaaa;
+        box-shadow: 0 0 0.19em 0.05em #0f0;
+      }
+      #bottom-saber:before {
+        background-color: #aaeaea;
+        box-shadow: 0 0 0.19em 0.05em #0ff;
+      }
     }
   }
   #site-nav-toggle:focus + label {

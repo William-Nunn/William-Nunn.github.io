@@ -6,7 +6,13 @@
     </a>
   </h1>
   <input id="site-nav-toggle" type="checkbox" />
-  <label for="site-nav-toggle" aria-label="Toggle navigation display"><span></span></label>
+  <label for="site-nav-toggle" aria-label="Toggle navigation display">
+    <div>
+      <span id="top-saber" class="fight-saber"></span>
+      <span id="middle-saber"></span>
+      <span id="bottom-saber" class="fight-saber"></span>
+    </div>
+  </label>
   <ul>
     {% for p in site.data.header_nav -%}
     <li

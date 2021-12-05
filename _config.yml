@@ -13,17 +13,15 @@ instagram:
 
 logo: "/content/images/headshot.jpeg"
 defaults:
-- scope:
-    path: ''
-  values:
-    image: "/content/images/headshot.jpeg" # embed image on social media cards
+  - scope:
+      path: ""
+    values:
+      image: "/content/images/headshot.jpeg" # embed image on social media cards
 
 # this is only for phone header colors, the actual website colors will be configured in a .scss file
 theme-color: "#f26500"
 
 ### !!! Nothing below this line should ever need to be edited !!! ###
-
-theme: minima
 
 exclude:
   - CNAME
