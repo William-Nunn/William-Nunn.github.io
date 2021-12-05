@@ -5,7 +5,7 @@ VARIABLES
 $background-color: #151515; // also used as the stroke or fill property for SVGs
 $text-color: #eaeaea;
 $primary-color: #f26500; // also used in _config.yml
-$link-color: #b5e853;
+$secondary-color: #b5e853;
 $background-color-formatting: #000000;
 
 // breakpoints assume 'max-width' - i.e. a "medium" device will be from 900 to 1200 px
@@ -94,7 +94,7 @@ MARKDOWN CONTENT
     display: block;
   }
   a {
-    color: $link-color;
+    color: $secondary-color;
   }
   a:hover {
     text-decoration: underline;
@@ -120,14 +120,14 @@ MARKDOWN CONTENT
  SKIP TO CONTENT (for easier keyboard navigation)
  ********************************/
  .site-skip-link {
-  background-color: $link-color;
+  background-color: $secondary-color;
   color: $background-color;
   border-radius: 0.5em;
   opacity: 1;
   z-index: 9001;
   padding: 8px;
   position: absolute;
-  left: 50%;
+  left: 5%;
   transform: translateY(-200%);
   transition: transform 0.3s;
   &:focus {
