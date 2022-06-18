@@ -99,7 +99,6 @@ MARKDOWN CONTENT
   a:hover {
     text-decoration: underline;
   }
-  opacity: 0.9;
   min-height: 100%;
   padding: 0.75em;
   @supports (padding-left: env(safe-area-inset-left)) {
@@ -110,7 +109,8 @@ MARKDOWN CONTENT
   }
   width: 100%;
   max-width: $breakpoints-medium;
-  background-color: $background-color;
+  // need to define opacity along with background-color so child elements (i.e. images) are not also opaque
+  background-color: #{$background-color}e6;
   border-radius: 1em;
   margin: 3em auto;
   flex: 1 0 auto;
