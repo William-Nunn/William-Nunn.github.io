@@ -8,8 +8,3 @@ document.getElementById("site-nav-toggle").addEventListener("keyup", (e) => {
     e.target.checked = !e.target.checked;
   }
 });
-
-// this code enables the "random image" gimmick - won't run without javascript enabled, but this is not required to get the full functionality of the website
-const imagePaths = ["headshot.jpg", "metal-gear-cooking.jpg"];
-const randomImage = imagePaths[Math.floor(Math.random() * imagePaths.length)];
-document.getElementById('site-look-at-this-guy').style.backgroundImage = `url(/content/images/${randomImage})`;

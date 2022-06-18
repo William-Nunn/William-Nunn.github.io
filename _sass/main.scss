@@ -141,21 +141,13 @@ HERO IMAGE - even works on IOS!
 ********************************/
 
 #site-look-at-this-guy {
-  background-repeat: no-repeat;
-  background-position: center 12.5%;
-  background-size: cover;
+  // background-repeat: no-repeat;
+  background-size: 100vw 100vh;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index: -9001; // WHAT?! -9000?
-  @media (orientation: landscape) {
-    background-size: 100vw 100vh;
-  }
-
-  &-no-js {
-    @extend #site-look-at-this-guy;
-    background-image: url("/content/images/headshot.jpg");
-  }
+  background-image: url("/content/images/metal-gear-cooking.jpg");
 }
 
 /********************************
