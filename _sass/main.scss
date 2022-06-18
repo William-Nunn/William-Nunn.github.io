@@ -435,6 +435,8 @@ CLASSES
     // padding is so images aren't right on top of each other on widths just greater than the breakpoint
     padding-left: 5px;
     padding-right: 5px;
+    // stop IOS from possibly trying to force reverting an image to aspect ratio after touching it
+    touch-action: none;
   }
 }
 
