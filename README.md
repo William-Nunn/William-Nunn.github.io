@@ -39,6 +39,10 @@ Iframes will be centered by default inside the content wrapper.
 
 Always start your path with a `/` character, i.e. `/content/icons/favicon.png` . Images will automatically be centered within the content wrapper.
 
+### Adding images to the gallery
+
+You don't need to edit gallery.html at all, but should instead edit `_data/gallery.yml` . You can have multiple sections, and multiple images in each section.
+
 ## Running locally
 
 If you want to try something out before updating the website, follow these instructions.

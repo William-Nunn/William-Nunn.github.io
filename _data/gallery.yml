@@ -1,0 +1,7 @@
+# if you don't want multiple sections, just have a single section_name object and leave the section_name blank
+- section_name: ''
+  section_images:
+  - image_path: 'content/images/headshot.jpg'
+    image_name: 'Professional Headshot'
+  - image_path: 'content/images/metal-gear-cooking.jpg'
+    image_name: 'Voices That Cook - Metal Gear'

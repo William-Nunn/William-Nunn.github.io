@@ -15,7 +15,7 @@ $breakpoints-medium: 1200px;
 $breakpoints-large: 1536px;
 
 $breakpoints-nav: 768px;
-$nav-transition-height: 300px; // probably needs to be rountinely increased if more nav links are added
+$nav-transition-height: 360px; // probably needs to be rountinely increased if more nav links are added, usually add 60px per tab
 
 /****************
 GENERIC
@@ -90,7 +90,7 @@ MARKDOWN CONTENT
     margin-top: 0;
   }
   img {
-    margin: 0 auto;
+    margin: 1rem auto;
     display: block;
   }
   a {
@@ -425,4 +425,18 @@ CLASSES
 // add this class to any link element associated with an iframe
 .iframe-backup-link {
   font-size: 0.75em;
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  img {
+    // padding is so images aren't right on top of each other on widths just greater than the breakpoint
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  h3 {
+    text-align: center;
+  }
 }

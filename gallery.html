@@ -1,0 +1,16 @@
+---
+layout: default
+title: Image Gallery
+permalink: /gallery/
+---
+
+<h2>Gallery</h2>
+
+{% for section in site.data.gallery -%}
+  {% if section.section_name and section.section_name != empty %} <h3>{{section.section_name}}</h3> {%- endif -%}
+  <section class="image-gallery">
+    {% for img in section.section_images -%}
+        <img src="{{img.image_path | relative_url}}" alt="{{img.image_name}}" width="404" height="253" />
+    {% endfor -%}
+  </section>
+{% endfor -%}
