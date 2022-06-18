@@ -3,7 +3,7 @@ $offscreen-amount: 2em;
 
 @keyframes middle-saber-in {
   0% {
-    transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(720deg);
   }
   50% {
     transform: translate(-50%, -50%) rotate(-90deg);
@@ -23,7 +23,7 @@ $offscreen-amount: 2em;
   }
 
   100% {
-    transform: translate(-50%, -50%) rotate(180deg);
+    transform: translate(-50%, -50%) rotate(720deg);
   }
 }
 
