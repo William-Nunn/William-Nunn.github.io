@@ -12,13 +12,13 @@ twitter:
 instagram:
   username: thevoicethatcooks
 
-logo: "/content/images/headshot.jpeg"
+logo: "/content/images/headshot.jpg"
 defaults:
   - scope:
       path: ""
     values:
       image:
-        path: "/content/images/headshot.jpeg" # embed image on social media cards
+        path: "/content/images/headshot.jpg" # embed image on social media cards
         alt: "William Nunn's Website"
         width: 478
         height: 598
