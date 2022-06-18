@@ -3,27 +3,27 @@ $offscreen-amount: 2em;
 
 @keyframes middle-saber-in {
   0% {
-    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, 360deg);
   }
   50% {
-    transform: translate3d(-50%, -50%, 0) rotate(-90deg);
+    transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -90deg);
   }
   100% {
-    transform: translate3d(-50%, -50%, 0) rotate(-90deg)
+    transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -90deg)
       translate3d($offscreen-amount, 0%, 0);
   }
 }
 
 @keyframes middle-saber-out {
   0% {
-    transform: translate3d(-50%, -$offscreen-amount, 0) rotate(-90deg);
+    transform: translate3d(-50%, -$offscreen-amount, 0) rotate3d(0, 0, 1, -90deg);
   }
   50% {
-    transform: translate3d(-50%, -50%, 0) rotate(-90deg);
+    transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, -90deg);
   }
 
   100% {
-    transform: translate3d(-50%, -50%, 0) rotate(360deg);
+    transform: translate3d(-50%, -50%, 0) rotate3d(0, 0, 1, 360deg);
   }
 }
 

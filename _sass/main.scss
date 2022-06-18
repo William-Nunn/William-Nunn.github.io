@@ -270,7 +270,6 @@ HERO IMAGE - even works on IOS!
         left: 0;
         width: calc(-1px + 75%);
         border-radius: 10em 0 0 10em;
-        background-color: $primary-color;
       }
       &:after {
         right: 0;
@@ -279,31 +278,28 @@ HERO IMAGE - even works on IOS!
       }
     }
 
+    // box-shadow blur-radius needs to be slightly smaller than label padding
     #top-saber {
       top: 20%;
+      &:before {
+        background-color: #eaaaaa;
+        box-shadow: 0 0 0.19em 0.05em #f00;
+      }
     }
     #bottom-saber {
       top: 80%;
+      &:before {
+        background-color: #aaeaea;
+        box-shadow: 0 0 0.19em 0.05em #0ff;        
+      }
     }
     #middle-saber {
       top: 50%;
       transform: translate(-50%, -50%);
       animation: middle-saber-out 0.5s ease forwards;
-    }
-
-    &:hover {
-      // box-shadow blur-radius needs to be slightly smaller than label padding
-      #top-saber:before {
-        background-color: #eaaaaa;
-        box-shadow: 0 0 0.19em 0.05em #f00;
-      }
-      #middle-saber:before {
+      &:before {
         background-color: #aaeaaa;
-        box-shadow: 0 0 0.19em 0.05em #0f0;
-      }
-      #bottom-saber:before {
-        background-color: #aaeaea;
-        box-shadow: 0 0 0.19em 0.05em #0ff;
+        box-shadow: 0 0 0.19em 0.05em #0f0;        
       }
     }
   }
