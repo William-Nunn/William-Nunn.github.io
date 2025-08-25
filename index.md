@@ -5,9 +5,7 @@ title: "Showcase"
 
 ## Demo Reel
 
-<iframe 
-         src="https://drive.google.com/file/d/1AQr4mbrAj0DMj_JwcnJgkUwmKl64utbl/preview" width="640" height="480" allow="
-  title="William Nunn Character Demo"
+<iframe src="https://drive.google.com/file/d/1AQr4mbrAj0DMj_JwcnJgkUwmKl64utbl/preview" width="640" height="480" allow="autoplay"></iframe>
   width="100%"
   height="500"
   loading="lazy"
