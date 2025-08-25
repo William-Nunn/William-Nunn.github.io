@@ -5,28 +5,23 @@ title: "Showcase"
 
 ## Demo Reel
 
-<iframe
-  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1165445653&color={{ site.theme-color | url_encode }}&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+<iframe 
+         src="https://drive.google.com/file/d/1AQr4mbrAj0DMj_JwcnJgkUwmKl64utbl/preview" width="640" height="480" allow="
   title="William Nunn Character Demo"
   width="100%"
   height="500"
-  allow="autoplay"
   loading="lazy"
 ></iframe>
 
-[Listen on Soundcloud](https://soundcloud.com/user-955527997/william-nunn-character-demo){: .iframe-backup-link}
 
 ## Raw Audio Sample
 
-<iframe 
-  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1411981276&color={{ site.theme-color | url_encode }}&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false&visual=true"
+<iframe src="https://drive.google.com/file/d/1VKlK9E6wLHzSerL4UgSSOeLoG31I5Isa/preview" width="640" height="480" allow="autoplay">
   width="100%" 
   height="300"
-  allow="autoplay"
   loading="lazy"
 ></iframe>
 
-[Listen on Soundcloud](https://soundcloud.com/user-955527997/raw-audio-sample-mk2){: .iframe-backup-link}
 
 ## Podcasts
 
