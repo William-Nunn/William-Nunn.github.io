@@ -16,7 +16,7 @@ title: "Showcase"
 
 <iframe src="https://drive.google.com/file/d/1VKlK9E6wLHzSerL4UgSSOeLoG31I5Isa/preview" width="640" height="480" allow="autoplay">
   width="100%" 
-  height="300"
+  height="500"
   loading="lazy"
 ></iframe>
 
